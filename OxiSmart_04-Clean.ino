@@ -6,7 +6,6 @@
 //Datos Wifi
 #include <WiFi.h>
 #include <ThingSpeak.h>
-#include "secrets.h"
 
 MAX30105 particleSensor;
 
