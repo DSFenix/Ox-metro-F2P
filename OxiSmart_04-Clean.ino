@@ -24,10 +24,10 @@ byte readLED = 13;
 
 //WIFI
 
-const char* ssid="NOMBRE RED WIFI";
-const char* password="CONTRASEÑA DE LA RED WIFI";
-unsigned long channelID = #######;//Colocar el Chanel ID del canal de Thingspeak
-const char* WriteAPIKey ="-------------";//Colocar el APIKey del canal de Thingspeak (Reemplazar todos los guiones)
+const char* ssid="MOVISTAR_5E20";
+const char* password="dMBPX9G4LE49YAE7H7QA";
+unsigned long channelID = 1845972;
+const char* WriteAPIKey ="UIJOIQGEQNNC3Z06";
 WiFiClient cliente;
 
 void setup()
@@ -51,14 +51,14 @@ void setup()
   // Initialize sensor
   if (!particleSensor.begin(Wire, I2C_SPEED_FAST))//400kHz speed
   {
-    Serial.println(F("MAX30105 was not found. Please check wiring/power."));
+    Serial.println(F("MAX30102 was not found. Please check wiring/power."));
     while (1);
   }
   byte ledBrightness = 60; //Options: 0=Off to 255=50mA
   byte sampleAverage = 4; //Options: 1, 2, 4, 8, 16, 32
   byte ledMode = 2; //Options: 1 = Red only, 2 = Red + IR, 3 = Red + IR + Green
   byte sampleRate = 100; //Options: 50, 100, 200, 400, 800, 1000, 1600, 3200
-  int pulseWidth = 215; //Options: 69, 118, 215, 411
+  int pulseWidth = 411; //Options: 69, 118, 215, 411
   int adcRange = 4096; //Options: 2048, 4096, 8192, 16384
   particleSensor.setup(ledBrightness, sampleAverage, ledMode, sampleRate, pulseWidth, adcRange);
 }
