@@ -24,10 +24,10 @@ byte readLED = 13;
 
 //WIFI
 
-const char* ssid="MOVISTAR_5E20";
-const char* password="dMBPX9G4LE49YAE7H7QA";
-unsigned long channelID = 1845972;
-const char* WriteAPIKey ="UIJOIQGEQNNC3Z06";
+const char* ssid="WIFI NAME";
+const char* password="WIFI PASS";
+unsigned long channelID = 18xxx72;
+const char* WriteAPIKey ="UIxxxxxxxxxxxZ06";
 WiFiClient cliente;
 
 void setup()
